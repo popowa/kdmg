@@ -9,22 +9,14 @@
     <meta name="author" content="">
 
     <title>非公式：屠竜の国々をまとめてみたい）</title>
-    <link rel="stylesheet" href="https://openlayers.org/en/v5.3.0/css/ol.css" type="text/css">
+    <link rel="stylesheet" href="./ol.css" type="text/css">
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="./css/starter-template.css" rel="stylesheet">
-    <script src="http://dev.openlayers.org/OpenLayers.js"></script>
+    <script src="./ol.js"></script>
 
-
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -55,42 +47,23 @@
 
           <div id="map" class="smallmap olMap map"></div>
           <div style="display: none;">
-            <!-- Clickable label for Vienna -->
-            <a class="overlay" id="king1" target="_blank" href="https://twitter.com/josm_josm/status/1130004903877681152/">アシェタ＝アーカーシャ</a>
-            <div id="marker" title="Marker"></div>
-            <!-- Popup -->
-            <div id="popup" title="">
-
+              <div id="marker" title="Marker"></div>
+              <!-- Popup -->
+              <div id="popup" title="">
             </div>
           </div>
           <script src="./js/overlay.js"></script>
-      <h2>タスク</h2>
-      <ul >
-        <li><s>画像の拡大・縮小が出来る用にする</s></li>
-        <li> 複数Overlay出来る仕組みを調べる（GeoJSON辺りで実装するか変数を上手くごにょごにょしたい
-        <li>登録情報を自動で取得出来る用にする(Google formなどで)</li>
-        <li>load()を別の仕組みに出来ないか考える</li>
-              <li>これも試してみる：Custom Overview Map https://openlayers.org/en/latest/examples/overviewmap-custom.html
-                <li>ヒマがあれば：Custom Animation https://openlayers.org/en/latest/examples/feature-animation.html
-      </ul>
-      <h3>参考URL</h3>
-      <ul>
-        <li>Boostrap <a href="https://getbootstrap.com">https://getbootstrap.com</a>
-        <li>OpenLayer <a href="https://openlayers.org/en/latest/doc/quickstart.html">https://openlayers.org/en/latest/doc/quickstart.html</a>
-          <li> Static image <a href="https://openlayers.org/en/latest/examples/static-image.html">https://openlayers.org/en/latest/examples/static-image.html</a>
-          <li> GeoJSON <a href="https://openlayersbook.github.io/ch06-styling-vector-layers/example-03.html">https://openlayersbook.github.io/ch06-styling-vector-layers/example-03.html</a>
-            <li>Overlay <a href="https://openlayers.org/en/latest/examples/overlay.html">https://openlayers.org/en/latest/examples/overlay.html</a>
+      <h2><a href="https://github.com/popowa/kdmg/issues">タスク</a></h2>
 
-      </ul>
-      </div>
+  </div>
     </div><!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
 
-    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.min.js"></script>
   </body>
 </html>
