@@ -1,26 +1,36 @@
 {
-  "name": "kdmp_map",
+  "name": "map",
   "version": "1.0.0",
-  "description": "Kdmp Map",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html -p 8080",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build --target node -d dist index.html -p 8080"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "http-server": "^0.11.1",
+    "ol": "5.3.3",
+    "parcel": "^1.12.3",
+    "parcel-bundler": "^1.12.3",
+    "fsevents" : "1.2.9"
   },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/popowa/kdmg.git"
   },
-  "keywords": [
-    "KDMP",
-    "MAP"
-  ],
   "author": "popo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/popowa/kdmg/issues"
   },
-  "homepage": "https://github.com/popowa/kdmg#readme"
+  "homepage": "https://github.com/popowa/kdmg#readme",
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "arch": "any",
+  "current": {
+    "os": "linux",
+    "arch": "x64"
+  }
 }

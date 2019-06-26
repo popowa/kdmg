@@ -1,13 +1,9 @@
-// https://openlayers.org/en/latest/examples/icon.html?q=Marker 次をこれ見る
-
 import Map from 'ol/Map.js';
 import View from 'ol/View.js';
 import {getCenter} from 'ol/extent.js';
 import ImageLayer from 'ol/layer/Image.js';
 import Projection from 'ol/proj/Projection.js';
 import Static from 'ol/source/ImageStatic.js';
-
-
 // icon
 import Feature from 'ol/Feature.js';
 import Overlay from 'ol/Overlay.js';
