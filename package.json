@@ -1,0 +1,26 @@
+{
+  "name": "kdmp_map",
+  "version": "1.0.0",
+  "description": "Kdmp Map",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/popowa/kdmg.git"
+  },
+  "keywords": [
+    "KDMP",
+    "MAP"
+  ],
+  "author": "popo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/popowa/kdmg/issues"
+  },
+  "homepage": "https://github.com/popowa/kdmg#readme"
+}
