@@ -32,5 +32,8 @@
   "current": {
     "os": "linux",
     "arch": "x64"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   }
 }

@@ -3,18 +3,23 @@ import bleach
 import json
 import csv
 
-f = open('output.json', 'w')
+'''
+https://github.com/popowa/kdmg/issues/1
+JSONファイルに追記するのを後で調べる
+'''
+
+f = open('output.json', 'r+')
+jsonData = json.load(f)
 
 urls = []
 with open('king_list.csv', 'r') as file_csv:
     reader = csv.reader(file_csv)
     header = next(reader)  # ヘッダーを読み飛ばしたい時
-
     for row in reader:
-        tmp = {"url":row[0], "pos":[row[1], row[2]]}
+        y_tmp =  850 - int(row[3])
+        tmp = {"url":row[1], "pos":[int(row[2]), y_tmp]}
         urls.append(tmp)
 
-list = []
 for i in range(len(urls)):
     params = {'url':urls[i]['url']}
     response = requests.get('https://publish.twitter.com/oembed', params=params)
@@ -26,8 +31,7 @@ for i in range(len(urls)):
         "html":data['html'],
         "pos": urls[i]["pos"]
     }
-    list.append(tmp)
+    jsonData.append(tmp)
 
-json.dump(list, f)
+json.dump(jsonData, f)
 f.close()
-#print(bleach.clean(data['html']))
