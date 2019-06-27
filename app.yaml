@@ -1,5 +1,0 @@
-env: flex
-runtime: nodejs
-handlers:
-- url: /img
-  static_dir: img

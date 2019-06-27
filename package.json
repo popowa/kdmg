@@ -2,17 +2,16 @@
   "name": "map",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel index.html -p 8080",
+    "start": "parcel index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build index.html -p 8080",
-    "fix-memory-limit": "cross-env LIMIT=2048 increase-memory-limit"
+    "build": "parcel build --public-url ./ -d dist index.html"
   },
   "dependencies": {
+    "fsevents": "1.2.9",
     "http-server": "^0.11.1",
-    "ol": "5.3.3",
+    "ol": "^5.3.3",
     "parcel": "^1.12.3",
-    "parcel-bundler": "^1.12.3",
-    "fsevents" : "1.2.9"
+    "parcel-bundler": "^1.12.3"
   },
   "devDependencies": {
     "increase-memory-limit": "^1.0.3",
