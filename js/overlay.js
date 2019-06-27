@@ -20,7 +20,7 @@ import {Icon, Style} from 'ol/style.js';
 //https://publish.twitter.com/oembed?url=https://twitter.com/nekodume_xxx/status/1139172395795722241
 
 var fs = require('fs');
-var twitter = JSON.parse(fs.readFileSync('./twitter.json', 'utf8'));
+var twitter = JSON.parse(fs.readFileSync('./output.json', 'utf8'));
 
 
 /* Projectを作成 */
@@ -53,7 +53,7 @@ var iconFeature = [];
 for(var i =0; i <twitter.length; i++){
   iconFeature[i] = new Feature({
     geometry: new Point([twitter[i].pos[0], twitter[i].pos[1]]),
-    name: twitter[i].html,
+    name: twitter[i]['html'],
   });
   iconFeature[i].setStyle(iconStyle);
   icons.push(iconFeature[i]);
@@ -122,7 +122,7 @@ map.on('click', function(evt) {
 
 // change mouse cursor when over marker
 map.on('pointermove', function(e) {
-  //$(element).popover('destroy');
+  $(element).popover('destroy');
   if (e.dragging) {
     $(element).popover('destroy');
     return;
