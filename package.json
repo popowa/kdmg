@@ -4,7 +4,8 @@
   "scripts": {
     "start": "parcel index.html -p 8080",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build --target node -d dist index.html -p 8080"
+    "build": "parcel build index.html -p 8080",
+    "fix-memory-limit": "cross-env LIMIT=2048 increase-memory-limit"
   },
   "dependencies": {
     "http-server": "^0.11.1",
@@ -13,10 +14,13 @@
     "parcel-bundler": "^1.12.3",
     "fsevents" : "1.2.9"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "increase-memory-limit": "^1.0.3",
+    "cross-env": "^5.0.5"
+  },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/popowa/kdmg.git"
+    "url": "git+ssh://git@github.com:popowa/kdmg.git"
   },
   "author": "popo",
   "license": "ISC",
