@@ -1,0 +1,1 @@
+{"version":3,"sources":["css/starter-template.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"starter-template.faaf3a04.css","sourceRoot":"..","sourcesContent":["body {\n}\n\n.map {\n  width: 100%;\n  height: 800px;\n  padding-top: 50px;\n  border: solid white 2px;\n  background-color: #a2927b;\n}\n"]}

@@ -20,7 +20,7 @@ import {Icon, Style} from 'ol/style.js';
 //https://publish.twitter.com/oembed?url=https://twitter.com/nekodume_xxx/status/1139172395795722241
 
 var fs = require('fs');
-var twitter = JSON.parse(fs.readFileSync('./output.json', 'utf8'));
+var twitter = JSON.parse(fs.readFileSync('./output_20190629.json', 'utf8'));
 
 
 /* Projectを作成 */
@@ -39,7 +39,8 @@ var iconStyle = new Style({
     anchor: [0.5, 46],
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
-    src: 'https://openlayers.org/en/latest/examples/data/icon.png'
+    src: 'https://popowa.github.io/kdmg/img/icon-45.png'
+//    src: 'https://openlayers.org/en/latest/examples/data/icon.png'
   }))
 });
 
@@ -95,7 +96,7 @@ var popup = new Overlay({
   element: element,
   positioning: 'bottom-center',
   stopEvent: true,
-  offset: [50, 0],
+  offset: [30, -10],
   autoPan: true
 });
 map.addOverlay(popup);
@@ -122,7 +123,7 @@ map.on('click', function(evt) {
 
 // change mouse cursor when over marker
 map.on('pointermove', function(e) {
-  $(element).popover('destroy');
+  //$(element).popover('destroy');
   if (e.dragging) {
     $(element).popover('destroy');
     return;
