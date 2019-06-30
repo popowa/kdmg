@@ -8,3 +8,20 @@ body {
   border: solid white 2px;
   background-color: #a2927b;
 }
+.kings{
+  width: 100%;
+  padding-top: 50px;
+}
+.grid{
+  width: 80%;
+
+}
+.grid-sizer,
+.grid-item {
+  width: 20%;
+  border: 1px;
+  padding: 5px;
+}
+/* 2 columns */
+.grid-item--width2 { width: 40%; }
+.grid-item--width2 { width: 400px; }
