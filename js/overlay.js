@@ -20,7 +20,7 @@ import {Icon, Style} from 'ol/style.js';
 //https://publish.twitter.com/oembed?url=https://twitter.com/nekodume_xxx/status/1139172395795722241
 
 var fs = require('fs');
-var twitter = JSON.parse(fs.readFileSync('./output_20190629.json', 'utf8'));
+var twitter = JSON.parse(fs.readFileSync('./output.json', 'utf8'));
 
 
 /* Projectを作成 */
