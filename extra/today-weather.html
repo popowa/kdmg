@@ -9,46 +9,11 @@
     <meta name="author" content="po3515">
 
     <title>非公式：屠竜 地図帳</title>
-    <link href="https://popowa.github.io/kdmg/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/ol.css" type="text/css">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <script src="./js/ol.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-    <script src="https://popowa.github.io/kdmg/js/masonry.pkgd.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
-    <style type="text/css">
-    .grid{
-      width: 80%;
-      max-width: 940px;
-      padding-top: 50px;
-      margin: 10px auto;
-    }
-    .grid-sizer,
-    .grid-item {
-      width: 300px;
-      border: 1px;
-      padding: 5px;
-      float: left;
-    }
-    </style>
-    <script>
-    $(function(){
-      $.getJSON("./extra/output_2019070102.json", function(data){
-        for(var i in data){
-            $( ".grid" ).append( "<div class=\"grid-item\" id=\"king-" + i + "\">" + data[i].html +"</div>");
-        }
-      });
-
-      var $grid = $('.grid').masonry({
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-sizer',
-        percentPosition: true,
-        isFitWidth: true
-      });
-    });
-    </script>
-
-
-
-    <script src="./js/twitter-masonry.js"></script>
   </head>
 
   <body>
@@ -61,8 +26,7 @@
           <ul class="nav navbar-nav">
             <li><a href="https://twitter.com/KDMG_tl">[公式]屠竜の王と門の神子👑</a></li>
             <li><a href="./index.html">地図🧭</a></li>
-            <li><a href="./pos.html">X/Y値📌</a></li>
-            <li class="active"><a href="./kings.html">王様一覧👑</a></li>
+            <li class="active"><a href="./pos.html">X/Y値📌</a></li>
             <li><a href="https://twitter.com/po3515">作者🐦</a></li>
             <li><a href="https://github.com/popowa/kdmg/issues">予定は未定📅</a></li>
           </ul>
@@ -70,16 +34,29 @@
       </div>
     </nav>
 
-      <div class="container kings" id="kings">
-        <div class="grid">
-          <div class="grid-sizer"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <div id="map" class="map"><img src="./img/map2.jpg"></div>
         </div>
+      </div>
+
     </div><!-- /.container -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-845207-17"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-845207-17');
+    </script>
+
+
   </body>
 </html>
