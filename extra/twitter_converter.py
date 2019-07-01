@@ -21,6 +21,8 @@ with open('king_list.csv', 'r') as file_csv:
         tmp = {"url":row[1], "pos":[row[2], str(y_tmp)]}
         urls.append(tmp)
 
+#<blockquote class="twitter-tweet" data-conversation="none" data-dnt="true">
+
 for i in range(len(urls)):
     params = {'url':urls[i]['url']}
     print('Fetch...'+urls[i]['url'])
