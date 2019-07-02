@@ -11,9 +11,6 @@
     <title>非公式：屠竜 地図帳</title>
     <link href="https://popowa.github.io/kdmg/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-    <script src="https://popowa.github.io/kdmg/js/masonry.pkgd.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-
     <style type="text/css">
     .grid{
       width: 80%;
@@ -31,18 +28,19 @@
     </style>
     <script>
     $(function(){
-      $.getJSON("./extra/output_2019070102.json", function(data){
-        for(var i in data){
-            $( ".grid" ).append( "<div class=\"grid-item\" id=\"king-" + i + "\">" + data[i].html +"</div>");
-        }
-      });
+      var output = "<div class='row'>";
+      $.getJSON("https://popowa.github.io/kdmg/extra/output_20190701.json", function(data){
+          for(var i=0;i < data.length;i++){
+             if((i%3)==0) {
+                output += "</div><div class='row'>" + "<div class='col-md-2'>" + data[i].html + "</div>";
+             } else {
+                output += "<div class='col-md-2'>" + data[i].html + "</div></div><div class='row'>";
+             }
+          }
+        //  console.log(output);
+        $('.main').append(output);
+        });
 
-      var $grid = $('.grid').masonry({
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-sizer',
-        percentPosition: true,
-        isFitWidth: true
-      });
     });
     </script>
 
@@ -70,9 +68,7 @@
       </div>
     </nav>
 
-      <div class="container kings" id="kings">
-        <div class="grid">
-          <div class="grid-sizer"></div>
+      <div class="container main">
         </div>
     </div><!-- /.container -->
     <!-- Bootstrap core JavaScript
