@@ -12,15 +12,22 @@ body {
   width: 100%;
   padding-top: 50px;
 }
+.search {
+  width: 100%;
+  padding-top: 50px;
+}
 .grid{
   width: 80%;
-
+  max-width: 940px;
+  padding-top: 50px;
+  margin: 10px auto;
 }
 .grid-sizer,
 .grid-item {
-  width: 20%;
+  width: 300px;
   border: 1px;
   padding: 5px;
+  float: left;
 }
 /* 2 columns */
 .grid-item--width2 { width: 40%; }
