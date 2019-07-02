@@ -7,40 +7,28 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="世界観共有の【屠竜の王と門の神子】の王様の国を地図上で楽しみます">
     <meta name="author" content="po3515">
-
     <title>非公式：屠竜 地図帳</title>
     <link href="https://popowa.github.io/kdmg/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-    <style type="text/css">
-    .grid{
-      width: 80%;
-      max-width: 940px;
+    <style>
+    .main{
       padding-top: 50px;
-      margin: 10px auto;
-    }
-    .grid-sizer,
-    .grid-item {
-      width: 300px;
-      border: 1px;
-      padding: 5px;
-      float: left;
     }
     </style>
     <script>
     $(function(){
       var output = "<div class='row'>";
-      $.getJSON("https://popowa.github.io/kdmg/extra/output_20190701.json", function(data){
+      $.getJSON("https://popowa.github.io/kdmg/extra/output.json", function(data){
           for(var i=0;i < data.length;i++){
              if((i%3)==0) {
-                output += "</div><div class='row'>" + "<div class='col-md-2'>" + data[i].html + "</div>";
+                output += "</div><div class='row'>" + "<div class='col-sm-3'>" + data[i].html + "</div>";
              } else {
-                output += "<div class='col-md-2'>" + data[i].html + "</div></div><div class='row'>";
+                output += "<div class='col-sm-3'>" + data[i].html + "</div>";
              }
           }
-        //  console.log(output);
+          output += "</div>";
         $('.main').append(output);
         });
-
     });
     </script>
 
