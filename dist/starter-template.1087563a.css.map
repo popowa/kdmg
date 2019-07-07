@@ -1,1 +1,0 @@
-{"version":3,"sources":["starter-template.css"],"names":[],"mappings":"AAGA,KACE,UAAW,CACX,YAAa,CACb,gBAAiB,CACjB,qBAAuB,CACvB,wBACF","file":"starter-template.1087563a.css","sourceRoot":"..","sourcesContent":["body {\n}\n\n.map {\n  width: 100%;\n  height: 800px;\n  padding-top: 50px;\n  border: solid white 2px;\n  background-color: #a2927b;\n}\n"]}
