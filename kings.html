@@ -55,8 +55,9 @@
         <h2>地図に載っている王様一覧</h2>
         <div class="alert alert-warning" role="alert">
           <ul>
-            <li>表示が遅いです
-            <li>途中で鍵アカになった場合は表示されない場合があります（地図の更新は週末です）
+            <li>表示が遅いです。15秒ほどかかります
+            <li>途中で鍵アカになった場合は表示されない場合があります（地図の更新は毎週土曜日などです）
+            <li>データ消費は19MB程です
           </ul>
         </div>
       </div>
@@ -66,6 +67,14 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-845207-17"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-845207-17');
+    </script>
+
   </body>
 </html>

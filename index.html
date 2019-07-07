@@ -16,7 +16,6 @@
     <!-- Custom styles for this template -->
     <link href="./css/starter-template.css" rel="stylesheet">
     <script src="./js/ol.js"></script>
-
   </head>
 
   <body>
@@ -30,6 +29,7 @@
             <li><a href="https://twitter.com/KDMG_tl">[公式]屠竜の王と門の神子👑</a></li>
             <li class="active"><a href="./index.html">地図🧭</a></li>
             <li><a href="./pos.html">X/Y値📌</a></li>
+            <li><a href="./kings.html">王様一覧👑</a></li>
             <li><a href="https://twitter.com/po3515">作者🐦</a></li>
             <li><a href="https://github.com/popowa/kdmg/issues">予定は未定📅</a></li>
           </ul>
@@ -42,12 +42,13 @@
       <div class="row-fluid">
         <div class="span12">
           <div id="map" class="map"></div>
-          <div id="popup" title="">
-
+          <div id="popup" title=""></div>
+          <div class="alert alert-warning" role="alert">
+            <ul>
+              <li>国のポップアップをクリック後、他国をクリックする際はマーカー以外をどこでもいいのでクリックしてください。（ポップアップの中身をクリアします）
+                <li>更新は新しいデータがあれば毎週土曜日か日曜日などに行います。新規に追加したい場合は<a href="./pos.html">こちら</a>をご覧ください。
+            </ul>
           </div>
-          <p>※出来る事；ポップアップのCSに飛べる↓<br />
-            追加でしないと行けない事：マーカーをクリックした後、次のマーカーをクリックする前にマーカー以外をクリックしないといけない（ポップアップの中身をクリアします）</p>
-
           <script src="./js/overlay.js"></script>
         </div>
       </div>
