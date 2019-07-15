@@ -9,7 +9,7 @@ JSONファイルに追記するのを後で調べる
 https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/get-statuses-oembed.html
 '''
 
-f = open('output_20190707.json', 'r+')
+f = open('output_20190715.json', 'r+')
 jsonData = json.load(f)
 urls = []
 with open('king_list20190707.csv', 'r') as file_csv:
