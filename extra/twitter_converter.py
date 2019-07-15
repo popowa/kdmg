@@ -9,18 +9,16 @@ JSONファイルに追記するのを後で調べる
 https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/get-statuses-oembed.html
 '''
 
-f = open('output_20190715.json', 'r+')
+f = open('output_20190715_02.json', 'r+')
 jsonData = json.load(f)
 urls = []
-with open('king_list20190707.csv', 'r') as file_csv:
+with open('king_list20190715_02.csv', 'r') as file_csv:
     reader = csv.reader(file_csv)
     header = next(reader)  # ヘッダーを読み飛ばしたい時
     for row in reader:
         y_tmp =  850 - int(row[3])
         tmp = {"url":row[1], "pos":[row[2], str(y_tmp)]}
         urls.append(tmp)
-
-#<blockquote class="twitter-tweet" data-conversation="none" data-dnt="true">
 
 for i in range(len(urls)):
     params = {'url':urls[i]['url']}
