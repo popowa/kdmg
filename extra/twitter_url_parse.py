@@ -3,11 +3,11 @@ import bleach
 import json
 import csv
 
-f = open('output_2.json', 'r+')
+f = open('output_20190806.json', 'r+')
 jsonData = json.load(f)
 
 urls = []
-with open('king_list20190630.csv', 'r') as file_csv:
+with open('king_list20190806.csv', 'r') as file_csv:
     reader = csv.reader(file_csv)
     header = next(reader)  # ヘッダーを読み飛ばしたい時
     for row in reader:
