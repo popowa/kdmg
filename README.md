@@ -8,3 +8,8 @@
 # 今後の予定
 
 https://github.com/popowa/kdmg/issues
+
+
+# メモ
+npm start
+npm run build
