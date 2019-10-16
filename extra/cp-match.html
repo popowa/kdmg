@@ -1,258 +1,193 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript" charset="utf-8"></script>
+    <meta name="description" content="世界観共有の【屠竜の王と門の神子】の王様の国を地図上で楽しみます">
+    <meta name="author" content="po3515">
+    <title>屠竜CPマッチングゲーム</title>
+    <link href="https://popowa.github.io/kdmg/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/quizymemorygame0.css" />
 
-    <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="./css/starter-template.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-        <title>非公式マヨイガの里ダイジェスト|　絵巻一覧
-        </title>
-
-    <script src="./js/jquery.quizymemorygame.js" charset="utf-8"></script>
-    <link rel="stylesheet" type="text/css" href="./css/quizymemorygame.css" />
-
+    <style>
+    .main{
+      padding-top: 50px;
+    }
+    </style>
   </head>
   <body>
-      <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+          <a class="navbar-brand" href="./index.html">非公式：屠竜 地図帳</a>
         </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="https://twitter.com/KDMG_tl">[公式]屠竜の王と門の神子👑</a></li>
+            <li><a href="./index.html">地図🧭</a></li>
+            <li><a href="./tags.html">タグ🏷</a></li>
+            <li class="active"><a href="./cp-match.html">契約済み当てゲーム❤️</a></li>
+
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </nav>
+      <div class="container main">
+        <h2>✅️ #KDMG_契約済み </h2>
+        <div class="row">
+          <div id="picbox">
+            <span id="boxbuttons">
+               <p>屠竜の契約済みCPを選んでください</p>
+               <p>画像がない場合は、鍵アカ・削除された可能性があります。</p>
+               <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfFocqS9GpD4jgW7ajINMVSC28wxT7KaHKaFdwvRMMkoC4HpA/viewform" target="_blank">入力フォーム</a>,
+                 <a href="https://docs.google.com/spreadsheets/d/1U7yojdxXI_zwCjbrmwkxKGLsMIK-JzXq5vbHvqeTlQY/edit?usp=sharing" target="_blank">登録済み一覧</a>
+               <p><span id="counter">0</span>回目</p>
+            <div id="reward"></div>
+            <div id="boxcard"></div>
+          </div>
 
-    <div class="container show-grid">
-        <div class="starter-template">
-          <p><span class="glyphicon glyphicon-grain"></span> 24時間内に千楽で起こったことをダイジェストで見れるページです。 <span class="glyphicon glyphicon-time"></span>最終更新時間:2016-03-01 03:34:06.230700</p>
         </div>
+      </div>
+    </div><!-- /.container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
 
-    <div class="row">
-        <div class="col-md-12">
-            <div id="picbox">
-              <span id="boxbuttons">
-                 <h2>千楽 - 賭場部屋その1 - 神経衰弱</h2>
-                <span class="button">
-                  <span id="counter">0</span>回目</span>
-                <span class="button">
-                  <a onclick="ResetGame();">リセット</a>
-                </span>
-              </span>
-              <div id="reward"></div>
-              <div id="boxcard"></div>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <h2>以下の投稿画像をお借りました</h2>
-            <div class="media">
-
-                <div class="col-md-3 photo">
-                    <a href=":large" target="_blank"><img src="https://pbs.twimg.com/media/EF3V6keXUAEyqF3.jpg:thumb" class="img-thumbnail"></a>
-                    <br /><span class="glyphicon glyphicon-user">鵺</span><a href="https://twitter.com/kibakobako/status/1179333912587378688/photo/1"><span class="glyphicon glyphicon-zoom-in">もっと見る</span></a>
-                </div>
-
-                <div class="col-md-3 photo">
-                    <a href=":large" target="_blank"><img src="https://pbs.twimg.com/media/EDTl5GjUUAQGdEc.jpg:thumb" class="img-thumbnail"></a>
-                    <br /><span class="glyphicon glyphicon-user">撫子</span><a href="https://twitter.com/po3515/status/1167811409624760321/photo/1"><span class="glyphicon glyphicon-zoom-in">もっと見る</span></a>
-                </div>
-
-                <div class="col-md-3 photo">
-                    <a href=":large" target="_blank"><img src="https://pbs.twimg.com/media/EE_d-UVU4AEgVzk.png:thumb" class="img-thumbnail"></a>
-                    <br /><span class="glyphicon glyphicon-user">鵺</span><a href="https://twitter.com/ume_tiyoko/status/1175402132935069696/photo/3"><span class="glyphicon glyphicon-zoom-in">もっと見る</span></a>
-                </div>
-
-                <div class="col-md-3 photo">
-                    <a href=":large" target="_blank"><img src="https://pbs.twimg.com/media/EDTl5GjUUAQGdEc.jpg:thumb" class="img-thumbnail"></a>
-                    <br /><span class="glyphicon glyphicon-user">撫子</span><a href="https://twitter.com/po3515/status/1167811409624760321/photo/1"><span class="glyphicon glyphicon-zoom-in">もっと見る</span></a>
-                </div>
-
-                <div class="col-md-3 photo">
-                    <a href=":large" target="_blank"><img src="https://pbs.twimg.com/media/EF3V6keXUAEyqF3.jpg:thumb" class="img-thumbnail"></a>
-                    <br /><span class="glyphicon glyphicon-user">鵺</span><a href="https://twitter.com/kibakobako/status/1179333912587378688/photo/1"><span class="glyphicon glyphicon-zoom-in">もっと見る</span></a>
-                </div>
-
-                <div class="col-md-3 photo">
-                    <a href=":large" target="_blank"><img src="https://pbs.twimg.com/media/EDTl5GjUUAQGdEc.jpg:thumb" class="img-thumbnail"></a>
-                    <br /><span class="glyphicon glyphicon-user">撫子</span><a href="https://twitter.com/po3515/status/1167811409624760321/photo/1"><span class="glyphicon glyphicon-zoom-in">もっと見る</span></a>
-                </div>
-
-
-                <div class="col-md-3 photo">
-                    <a href=":large" target="_blank"><img src="https://pbs.twimg.com/media/EF3V6keXUAEyqF3.jpg:thumb" class="img-thumbnail"></a>
-                    <br /><span class="glyphicon glyphicon-user">鵺</span><a href="https://twitter.com/kibakobako/status/1179333912587378688/photo/1"><span class="glyphicon glyphicon-zoom-in">もっと見る</span></a>
-                </div>
-
-                <div class="col-md-3 photo">
-                    <a href=":large" target="_blank"><img src="https://pbs.twimg.com/media/EDTl5GjUUAQGdEc.jpg:thumb" class="img-thumbnail"></a>
-                    <br /><span class="glyphicon glyphicon-user">撫子</span><a href="https://twitter.com/po3515/status/1167811409624760321/photo/1"><span class="glyphicon glyphicon-zoom-in">もっと見る</span></a>
-                </div>
-
-                <div class="col-md-3 photo">
-                    <a href=":large" target="_blank"><img src="https://pbs.twimg.com/media/EF3V6keXUAEyqF3.jpg:thumb" class="img-thumbnail"></a>
-                    <br /><span class="glyphicon glyphicon-user">鵺</span><a href="https://twitter.com/kibakobako/status/1179333912587378688/photo/1"><span class="glyphicon glyphicon-zoom-in">もっと見る</span></a>
-                </div>
-
-                <div class="col-md-3 photo">
-                    <a href=":large" target="_blank"><img src="https://pbs.twimg.com/media/EDTl5GjUUAQGdEc.jpg:thumb" class="img-thumbnail"></a>
-                    <br /><span class="glyphicon glyphicon-user">撫子</span><a href="https://twitter.com/po3515/status/1167811409624760321/photo/1"><span class="glyphicon glyphicon-zoom-in">もっと見る</span></a>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
     <script>
         var BoxOpened = "";
         var ImgOpened = "";
         var Counter = 0;
         var ImgFound = 0;
         var Source = "#boxcard";
-
-/*        var ImgSource = [
-             "https://pbs.twimg.com/media/EF3V6keXUAEyqF3.jpg:thumb",,
-             "https://pbs.twimg.com/media/EDTl5GjUUAQGdEc.jpg:thumb",
-             "https://pbs.twimg.com/media/EE_d-UVU4AEgVzk.png:thumb",
-             "https://pbs.twimg.com/media/EEOZ2XTU8AEZOem.jpg:thumb"
-        ];
-        */
         var ImgSource = [
-             ["https://pbs.twimg.com/media/EF3V6keXUAEyqF3.jpg:thumb", "p1"],
-             ["https://pbs.twimg.com/media/EDTl5GjUUAQGdEc.jpg:thumb", "p2"],
-             ["https://pbs.twimg.com/media/EE_d-UVU4AEgVzk.png:thumb", "p1"],
-             ["https://pbs.twimg.com/media/EEOZ2XTU8AEZOem.jpg:thumb", "p2"],
+          [ "https://twitter.com/kutsuzoko_/status/1137554251666739200", "p0", "https://pbs.twimg.com/media/D8lnaBAU0AA-uZ5.png:thumb" ],
+[ "https://twitter.com/garasudama/status/1152552687960915968", "p0", "https://pbs.twimg.com/media/D_6wP43VUAYYH8V.jpg:thumb" ],
+[ "https://twitter.com/s2_mitu27toko/status/1173622593582071809", "p1", "https://pbs.twimg.com/media/EEmLeVcUYAAVGPw.jpg:thumb" ],
+[ "https://twitter.com/uno_niki_51/status/1117442739979685889", "p1", "https://pbs.twimg.com/media/D4Hz41bUIAY-k5N.jpg:thumb" ],
+[ "https://twitter.com/uno_niki_51/status/1091987419950268416", "p2", "https://pbs.twimg.com/media/DyeEtZIUcAEg8fn.jpg:thumb" ],
+[ "https://twitter.com/ume_tiyoko/status/1173528642426568704", "p2", "https://pbs.twimg.com/media/EEk2D0TUUAE_6L9.jpg:thumb" ],
+[ "https://twitter.com/mawoshiron/status/1142377043616653313", "p3", "https://pbs.twimg.com/media/D9qJjkuU4AA2Uu6.jpg:thumb" ],
+[ "https://twitter.com/29n_tkn/status/1077219645193576448", "p3", "https://pbs.twimg.com/media/DvMMCnSVAAA_bbY.jpg:thumb" ],
+[ "https://twitter.com/uno_niki_51/status/1125443601847033857", "p4", "https://pbs.twimg.com/media/D55g-dNVUAAJAy4.jpg:thumb" ],
+[ "https://twitter.com/imaringo13/status/1167594945974128645", "p4", "https://pbs.twimg.com/media/EDQg9SJXkAANKFe.png:thumb" ],
+[ "https://twitter.com/ume_tiyoko/status/1164562294325444608", "p5", "https://pbs.twimg.com/media/EClbN2ZUYAMInK5.jpg:thumb" ],
+[ "https://twitter.com/kisaragitsukito/status/1080091962236035072", "p5", "https://pbs.twimg.com/media/Dv1BNQ7V4AE7hkt.png:thumb" ],
+[ "https://twitter.com/ume_tiyoko/status/1164563619238965248", "p6", "https://pbs.twimg.com/media/EClcaw1UEAA2b8G.jpg:thumb" ],
+[ "https://twitter.com/30h_sk/status/1161977746928496642", "p6", "https://pbs.twimg.com/media/ECAsXCoVUAAqpiW.jpg:thumb" ],
+[ "https://twitter.com/ryuuka_kkk/status/1163784111535710208", "p7", "https://pbs.twimg.com/media/ECaW7eMUwAEEfq7.jpg:thumb" ],
+[ "https://twitter.com/30h_sk/status/1145187694416285696", "p7", "https://pbs.twimg.com/media/D-SF4TDU0AE_xCh.jpg:thumb" ],
+[ "https://twitter.com/nigari_org/status/1094880076775055360", "p8", "https://pbs.twimg.com/media/DzHLet4UcAY5h-j.jpg:thumb" ],
+[ "https://twitter.com/mitsuru_nrkr/status/1162484547126038529", "p8", "https://pbs.twimg.com/media/ECH5hHhVUAAYwyV.jpg:thumb" ],
+[ "https://twitter.com/yukimarunisiki/status/1154795588979851265", "p9", "https://pbs.twimg.com/media/EAaoWp7U8AEfc7D.jpg:thumb" ],
+[ "https://twitter.com/kkk__Keiko/status/1145226898840010752", "p9", "https://pbs.twimg.com/media/D-SpxY8UwAAR-UT.jpg:thumb" ],
+[ "https://twitter.com/kkookkii_/status/1148989346441121792", "p10", "https://pbs.twimg.com/media/D_IHjp_U4AATAVE.jpg:thumb" ],
+[ "https://twitter.com/kogu_sousaku/status/1155477699197984768", "p10", "https://pbs.twimg.com/media/EAkUzFOUYAAJgDk.png:thumb" ],
+[ "https://twitter.com/kkk__Keiko/status/1149356116213551104", "p11", "https://pbs.twimg.com/media/D_NVRotUwAAkNrv.png:thumb" ],
+[ "https://twitter.com/kulu_298/status/1149348610774978560", "p11", "https://pbs.twimg.com/media/D_NOd4iUIAA1rZj.jpg:thumb" ],
+[ "https://twitter.com/ccc_pt/status/1151454196702437377", "p12", "https://pbs.twimg.com/media/D_rIbp9UcAAr3pV.png:thumb" ],
+[ "https://twitter.com/R_sette/status/1151454008529133569", "p12", "https://pbs.twimg.com/media/D_rHTN4VUAAp5DS.jpg:thumb" ],
+[ "https://twitter.com/30h_sk/status/1150986810278866944", "p13", "https://pbs.twimg.com/media/D_kgFXhUcAAaiCn.jpg:thumb" ],
+[ "https://twitter.com/kisaragitsukito/status/1058356166797848577", "p13", "https://pbs.twimg.com/media/DrAIehbV4AAhg0c.jpg:thumb" ],
+[ "https://twitter.com/30h_sk/status/1125301424588328960", "p14", "https://pbs.twimg.com/media/D53fkmAUcAAAu41.jpg:thumb" ],
+[ "https://twitter.com/uno_niki_51/status/1111656476467068932", "p14", "https://pbs.twimg.com/media/D21lOWOUkAAqwEV.jpg:thumb" ],
+[ "https://twitter.com/kisaragitsukito/status/1147839024813338625", "p15", "https://pbs.twimg.com/media/D-3wbVwU4AAfs6G.png:thumb" ],
+[ "https://twitter.com/uno_niki_51/status/1086681495702392832", "p15", "https://pbs.twimg.com/media/DxSq-eOUwAAithy.jpg:thumb" ],
+[ "https://twitter.com/uni_to_ikura11/status/1138836529567023105", "p16", "https://pbs.twimg.com/media/D831yQKVsAEAbVr.jpg:thumb" ],
+[ "https://twitter.com/Lp_G__/status/1081753453133590529", "p16", "https://pbs.twimg.com/media/DwMpBtHV4AACfKA.jpg:thumb" ],
+[ "https://twitter.com/ayuso39/status/1139861071538167810", "p17", "https://pbs.twimg.com/media/D9GZSGlU4AAjI8T.png:thumb" ],
+[ "https://twitter.com/yuikcake831/status/1112962358903595008", "p17", "https://pbs.twimg.com/media/D3IJXO8X4AESlV9.jpg:thumb" ],
+[ "https://twitter.com/hotori0107/status/1131624025828995072", "p18", "https://pbs.twimg.com/media/D7RV-46VUAA60kR.png:thumb" ],
+[ "https://twitter.com/Hotori_01/status/1128335214479069185", "p18", "https://pbs.twimg.com/media/D6iluw6UUAABvjL.jpg:thumb" ],
+[ "https://twitter.com/sk_kurokoge/status/1104465927628677120", "p19", "https://pbs.twimg.com/media/D1PZ5yfVYAE_4Y7.jpg:thumb" ],
+[ "https://twitter.com/tuihasamiiiii/status/1104701097187323904", "p19", "https://pbs.twimg.com/media/D1Svsh8UYAA2Szz.png:thumb" ],
+[ "https://twitter.com/keikocat11/status/1119902252934684672", "p20", "https://pbs.twimg.com/media/D4qw3WwUYAAevTR.jpg:thumb" ],
+[ "https://twitter.com/amanatsu0311/status/1130077314501500928", "p20", "https://pbs.twimg.com/media/D67XNz2U0AAe5Fz.png:thumb" ],
+[ "https://twitter.com/amanatsu0311/status/1126869679119618049", "p21", "https://pbs.twimg.com/media/D6Nx7LNU0AEvqaf.png:thumb" ],
+[ "https://twitter.com/hanyamaru22sn/status/1126870680975204353", "p21", "https://pbs.twimg.com/media/D6Ny6InUIAARv7k.jpg:thumb" ],
+[ "https://twitter.com/teisfkgkoku/status/1076757937228378112", "p22", "https://pbs.twimg.com/media/DvFo8vwU0AARHlb.jpg:thumb" ],
+[ "https://twitter.com/hotori0107/status/1101894204458917889", "p22", "https://pbs.twimg.com/media/D0q2zuxVAAAbiQx.png:thumb" ]
         ];
         function RandomFunction(MaxValue, MinValue) {
         		return Math.round(Math.random() * (MaxValue - MinValue) + MinValue);
         	}
+
         function ShuffleImages() {
         	var ImgAll = $(Source).children();
         	var ImgThis = $(Source + " div:first-child");
         	var ImgArr = new Array();
+        	var UrlArr = new Array();
         	for (var i = 0; i < ImgAll.length; i++) {
-        		ImgArr[i] = $("#" + ImgThis.attr("id") + " img").attr("src");
+            ImgArr[i] = $("#" + ImgThis.attr("id") + " img");
+            UrlArr[i] = $("#" + ImgThis.attr("id") + " a");
         		ImgThis = ImgThis.next();
         	}
-
-        		ImgThis = $(Source + " div:first-child");
-
+        	ImgThis = $(Source + " div:first-child");
         	for (var z = 0; z < ImgAll.length; z++) {
         	var RandomNumber = RandomFunction(0, ImgArr.length - 1);
-
-        		$("#" + ImgThis.attr("id") + " img").attr("src", ImgArr[RandomNumber]);
+            $("#" + ImgThis.attr("id")).append(ImgArr[RandomNumber]);
+            $("#" + ImgThis.attr("id")).append(UrlArr[RandomNumber]);
         		ImgArr.splice(RandomNumber, 1);
+            UrlArr.splice(RandomNumber, 1);
         		ImgThis = ImgThis.next();
         	}
-        }
-
-        function ResetGame() {
-        	ShuffleImages();
-        	$(Source + " div img").hide();
-        	$(Source + " div").css("visibility", "visible");
-        	Counter = 0;
-        	$("#success").remove();
-        	$("#counter").html("" + Counter);
-        	BoxOpened = "";
-        	ImgOpened = "";
-        	ImgFound = 0;
-        	return false;
         }
 
         function OpenCard() {
         	var id = $(this).attr("id");
           var card_id = $(this).children("id");
-        	if ($("#" + id + " img").is(":hidden")) {
-        		$(Source + " div").unbind("click", OpenCard);
-
-        		$("#" + id + " img").slideDown('fast');
-
-        		if (ImgOpened == "") {
-        			BoxOpened = id;
-              BOXOpenedCard = card_id
-//        			ImgOpened = $("#" + id + " img").attr("src");
-        			ImgOpened = $("#" + id + " img").attr("id");
-              console.log("1:"+ImgOpened);
-        			setTimeout(function() {
-        				$(Source + " div").bind("click", OpenCard)
-        			}, 300);
-        		} else {
-//        			CurrentOpened = $("#" + id + " img").attr("src");
-                CurrentOpened = $("#" + id + " img").attr("id");
-                console.log("1:"+CurrentOpened);
-
+          $("#" + id + " img").addClass("selected");
+      		if (ImgOpened == "") {
+      			BoxOpened = id;
+            BOXOpenedCard = card_id
+      			ImgOpened = $("#" + id + " img").attr("id");
+      		} else {
+              CurrentOpened = $("#" + id + " img").attr("id");
         			if (ImgOpened != CurrentOpened) {
         				setTimeout(function() {
-        					$("#" + id + " img").slideUp('fast');
-        					$("#" + BoxOpened + " img").slideUp('fast');
+                  $("#" + id + " img").removeClass("selected");
+                  $("#" + BoxOpened + " img").removeClass("selected");
         					BoxOpened = "";
         					ImgOpened = "";
+                  BOXOpenedCard ="";
+                  CurrentOpened ="";
         				}, 500);
         			} else {
-        				//$("#" + id + " img").parent().css("visibility", "hidden");
-        				//$("#" + BoxOpened + " img").parent().css("visibility", "hidden");
         				ImgFound++;
         				BoxOpened = "";
         				ImgOpened = "";
+                BOXOpenedCard ="";
+                CurrentOpened ="";
         			}
-        			setTimeout(function() {
-        				$(Source + " div").bind("click", OpenCard)
-        			}, 400);
-        		}
+      		}
+
         		Counter++;
         		$("#counter").html("" + Counter);
-
-        		if (ImgFound == ImgSource.length) {
-        			$("#counter").prepend('<span id="success">全部見つけましたねおめでとう！ </span>');
-                    $("#reward").append("<h2>マヨイガ★ラブハート: 魔法の鍵をゲットした！</h2><p>「マヨラブ★オープンハート」と叫ぶと、ラキラ光ってマヨラブ戦士に変身する鍵の色によってコスチュームの色が変わる<br /><small>鍵の提供: マヨイガの里・主催者様</small>");
-                    $("#reward").append($("<img>").attr("src", "https://pbs.twimg.com/media/EEZqtSqUUAEXJAb.jpg:orig").attr("width",298).attr("height",282).attr("class", "center-block"));
-        		}
-        	}
+        		if (ImgFound == ImgSource.length/2) {
+        			$("#reward").prepend('<span id="success">屠竜のCPを全部見つけました！！おめでとう！ </span>');
+            }
         }
-
         $(function() {
           $.each(ImgSource, function(i, val) {
-            $(Source).append("<div id=card" + i + " class=img-rounded><img src=" + val[0] + " id=" + val[1] + ">");
+            $(Source).append("<div id=card" + i + " class=img-rounded><img src=" + val[2] + " id=" + val[1] + "><a href="+ val[0] +" target=_blank>▲CS▲</a>");
+
           });
-/*
-        for (var y = 1; y < 3 ; y++) {
-        	$.each(ImgSource, function(i, val) {
-        		$(Source).append("<div id=card" + y + i + " class=img-rounded><img src=" + val + " />");
-        	});
-        }
-        */
         	$(Source + " div").click(OpenCard);
         	ShuffleImages();
         });
+
 </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-845207-17"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        <div class="col-md-12">
-            <footer>コンテンツ内容は、マヨイガの里に参加しているユーザーに属します。</footer>
-        </div>
-
-    </div><!-- /.container -->
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <!--<script src="./js/masonry.pkgd.min.js" charset="utf-8"></script>-->
+      gtag('config', 'UA-845207-17');
+    </script>
 
   </body>
 </html>

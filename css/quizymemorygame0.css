@@ -1,0 +1,50 @@
+
+#picbox {
+	margin: 0px auto;
+	width: 1200px;
+}
+#boxcard {
+	z-index: 1;
+	margin: 10px 0 0;
+}
+#boxcard div{
+	float: left;
+	width: 160px;
+	height: 180px;
+	margin: 5px;
+	padding: 5px;
+	cursor: pointer;
+	z-index: 2;
+	border-radius: 5px;
+	box-shadow: 0 1px 5px rgba(0,0,0,.5);
+}
+#boxcard div img {
+	border-radius: 10px;
+	z-index: 3;
+}
+#boxcard a {
+	font-size: 9px;
+}
+#boxbuttons {
+	text-align: center;
+	margin: 20px;
+	display: block;
+}
+#boxbuttons .button {
+	text-transform: uppercase;
+	background: #EE872A;
+	padding: 5px 10px;
+	margin: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+#boxbuttons .button:hover {
+	background: #999;
+}
+.selected {
+    opacity:0.2;
+}
+#boxcard:after {
+	clear:both;
+	display: block;
+}
