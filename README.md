@@ -7,8 +7,10 @@
 
 # 今後の予定
 
-https://github.com/popowa/kdmg/issues
-
+今後の更新は特にありません。
+11月末にこちらのサイト(http://kdmg.popowa.com/)をクローズします。
+今まで有り難うございました🙏
+438国(追加済み)+63国(鍵アカ・場所が不明など)
 
 # メモ
 npm start
