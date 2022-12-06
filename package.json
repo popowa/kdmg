@@ -11,7 +11,7 @@
     "ev-emitter": "^1.1.1",
     "fsevents": "1.2.9",
     "get-size": "^2.0.3",
-    "http-server": "^0.11.1",
+    "http-server": "^0.11.2",
     "jquery": "^3.4.1",
     "masonry-layout": "4.2.2",
     "ol": "^5.3.3",
